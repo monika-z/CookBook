@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'categories/index'
+
+  get 'categories/show'
+
   devise_for :users
   get 'welcome/index'
 
@@ -20,6 +24,7 @@ Rails.application.routes.draw do
         resources :comments
       end  
 
+      resources :categories
   # Example resource route with options:
   #   resources :products do
   #     member do
