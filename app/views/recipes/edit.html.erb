@@ -1,5 +1,11 @@
-<h1>Editing recipe</h1>
+<% if user_signed_in? && current_user.id == @recipe.user_id  %>
 
-<%= render 'form' %>
+    <h1>Editing recipe</h1>
+
+    <%= render 'form' %>
  
-<%= link_to 'Back', recipes_path %>
+    <%= link_to 'Back', recipes_path %>
+
+<% else %>
+    <% controller.redirect_to recipe_path %>
+<% end %>

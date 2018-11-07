@@ -8,8 +8,10 @@
   <%= comment.content %>
 </p>
 
+<% if user_signed_in? && current_user.id == comment.user_id  %>
 <p>
-  <%= link_to 'Destroy Comment', [comment.recipe, comment],
+  <%= link_to 'Delete Comment', [comment.recipe, comment],
                method: :delete,
                data: { confirm: 'Are you sure?' } %>
 </p>
+<% end %>
