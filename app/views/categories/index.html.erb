@@ -1,6 +1,6 @@
 <h1>Categories:</h1>
-
+<ul>
   <% @categories.each do |category| %>
-    <p><%= link_to category.name, category_path(category) %> (<%= category.recipes.size %>)</p>
+    <li><%= link_to category.name, category_path(category) %> (<%= category.recipes.size %>)</li>
   <% end %>
-  
+</ul>  

@@ -1,8 +1,3 @@
-<div>
-  <% if user_signed_in? %>
-    <h2><%= link_to 'Add new recipe', new_recipe_path %></h2>
-  <% end %>
-</div> 
 
 <h1>All Recipes:</h1>
 
@@ -10,11 +5,12 @@
 
 <div>
   <% @recipes.each do |recipe| %>
-  
-    <div><h3><%= link_to recipe.title, recipe_path(recipe) %></h3></div>
-    <div><%= recipe.text[0,500] %>... <%= link_to "Read More", recipe_path(recipe) %></div>
-    <div>Comments(<%= recipe.comments.size %>)</div>
-    <br><hr>
+    <div class="recipe">
+      <div><h3><%= link_to recipe.title, recipe_path(recipe) %></h3></div>
+      <div><%= recipe.text[0,500] %>... <%= link_to "Read More", recipe_path(recipe) %></div>
+      <div>Comments(<%= recipe.comments.size %>)</div>
+    </div>
+    
   <% end %>
   
 </div>

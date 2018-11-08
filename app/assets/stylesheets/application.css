@@ -13,3 +13,142 @@
  *= require_tree .
  *= require_self
  */
+ 
+body
+	{
+
+		font-size: 11pt;
+		background: #FFFFE0;
+		font-family:  Futura, sans-serif;
+    }
+    
+
+    strong{
+    	font-weight: bold;
+    	font-size: 20px;
+    }
+
+	ol, ul
+	{
+		list-style: none;
+	}
+
+	p
+	{
+		line-height: 180%;
+	}
+
+
+	a
+	{
+		color: #4B0082;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	a:hover
+	{
+		color: #9932CC;
+	}
+	
+	h1
+	{
+	    color: #8A2BE2;
+	}
+	
+	.recipe
+	{
+	    padding: 20px;
+	}
+	
+    .comments
+	{
+	    padding: 20px;
+	}
+
+/*********************************************************************************/
+/* Menu                                                                          */
+/*********************************************************************************/
+
+
+	#menu
+	{
+		right: 0px;
+		top: 0;
+		background: #9370DB;
+		color: #FFF;
+	   	z-index: 1;
+	   	font-family: Calibri;
+	   	text-align: center;
+	}
+
+	#menu ul
+	{
+		display: inline-block;
+		padding: 0.2em 0.8em 0em 0.4em;
+		text-align: center;
+	}
+
+	#menu li
+	{
+		display: inline-block;
+	}
+
+	#menu li a, #menu li span
+	{
+		display: inline-block;
+		padding: 0.2em 0.7em;
+		text-decoration: none;
+		font-size: 1.2em;
+		font-weight: 600;
+		text-transform: uppercase;
+		outline: 0;
+		color: #fff;
+	}
+
+	#menu li h1 a {
+		text-transform: none;
+		font-variant: small-caps;
+	}
+
+	#menu li:hover a, #menu li.active a, #menu li.active span
+	{
+		color:#063e53;
+	}
+
+	#menu .field
+	{
+		display: inline-block;
+		margin: 0 2px 0 0 ;
+		position: relative;
+		background: #FFF;
+	}
+
+
+	#menu li .button
+        {
+                display: inline-block;
+
+                padding: 0.1em 0.1em;
+
+                line-height: 0.5em;
+                letter-spacing: 1px;
+                text-decoration: none;
+
+                color: #FFF;
+        }
+    #menu{color: #fff;}
+
+
+/*********************************************************************************/
+/* Content                                                                       */
+/*********************************************************************************/
+
+	#content
+	{
+
+		padding:60px;
+		overflow: auto;
+	}
+
+

@@ -1,13 +1,14 @@
+<div class="recipe">
 <p>
   <h2><strong> <%= @recipe.title %> </strong></h2>
 </p>
  
 <p>
-  Author:<strong><%= @recipe.user.username %></strong>
+  Author: <%= @recipe.user.username %> 
 </p> 
  
 <p>
-  <strong>Categories:</strong> 
+Categories:
   <% if @recipe.categories.empty? %>No categories<% end %>
   
         <% @recipe.categories.each do |category| %> 
@@ -20,8 +21,8 @@
   <%= @recipe.text %>
 </p>
 
-<hr>
-
+</div>
+<div class="comments">
 <h4>Comments(<%= @recipe.comments.size %>):</h4>
 <%= render @recipe.comments %>
 
@@ -32,11 +33,12 @@
   
 
     <% if  current_user.id == @recipe.user_id  %>
-      <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
-      <%= link_to 'Delete', recipe_path(@recipe),
+      <%= link_to 'Edit Recipe', edit_recipe_path(@recipe) %> |
+      <%= link_to 'Delete Recipe', recipe_path(@recipe),
               method: :delete,
               data: { confirm: 'Are you sure?' } %>   |       
     <% end %>  
 <% end %>
 
 <%= link_to 'Back', recipes_path %>
+</div>

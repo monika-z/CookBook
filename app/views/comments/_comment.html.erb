@@ -1,17 +1,14 @@
-<p>
-  <strong><%= comment.user.username %></strong>
-</p>
- 
-<p>
+<p class="comments">
+<%= comment.user.username %>:
+<br>
   <%= comment.content %>
-</p>
+<br>
 
 <% if user_signed_in? && current_user.id == comment.user_id  %>
-<p>
+
   <%= link_to 'Delete Comment', [comment.recipe, comment],
                method: :delete,
                data: { confirm: 'Are you sure?' } %>
 </p>
 
 <% end %>
-<hr>

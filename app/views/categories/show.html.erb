@@ -5,8 +5,11 @@
   <% if @category.recipes.empty? %>No recipes<% end %>
   
   <% @category.recipes.each do |recipe| %> 
+  <p class="recipe">
     <p><%= link_to recipe.title, recipe %></p>
     <p><%= recipe.text[0,500] %>...</p>
+    
+  </p>  
   <% end %>
 
 <p> 
