@@ -1,5 +1,6 @@
 class RecipesController < ApplicationController
     before_action :authenticate_user!, only: [:new, :edit, :create, :update, :destroy]
+    before_action :set_categories, only: [:new, :edit, :update, :create]
     
     def index
         @recipes = Recipe.all
@@ -46,7 +47,13 @@ class RecipesController < ApplicationController
     
     private
         def recipe_params
-            params.require(:recipe).permit(:title, :text).merge(user_id: current_user.id)
+            params.require(:recipe).permit(:title, :text, {:category_ids => []}).merge(user_id: current_user.id)
         end    
+        
+        def set_categories
+            @categories = Category.all.map do |category|
+            [ category.name, category.id]
+        end
+end
     
 end
