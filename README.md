@@ -1,24 +1,28 @@
+CookBook app 
+================
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+### App description
+-------------
+Application for sharing cooking recipes with other users.
+[Running on Heroku](https://glacial-meadow-65723.herokuapp.com/)
 
+### Technology stack
+-------------
 
-Welcome to your Rails project on Cloud9 IDE!
+| Name |  Version |
+| :--: | :---: |
+| [Ruby](https://www.ruby-lang.org) | 2.5.3 |
+| [Ruby on Rails](http://www.rubyonrails.org/) | 5.0.7 |
 
-To get started, just do the following:
+### Setup
+-------------
+1. clone repository,
+2. `cd path/to/repo`,
+3. `rake db:create db:schema:load`
 
-1. Run the project with the "Run Project" button in the menu bar on top of the IDE.
-2. Preview your new app by clicking on the URL that appears in the Run panel below (https://HOSTNAME/).
+### Additional Gems used
+-------------
 
-Happy coding!
-The Cloud9 IDE team
-
-
-## Support & Documentation
-
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+* [devise](https://github.com/plataformatec/devise),
+* [ransack](https://github.com/activerecord-hackery/ransack),
+* [will_paginate](https://github.com/mislav/will_paginate).
