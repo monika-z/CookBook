@@ -1,1 +1,12 @@
 <h1><%= @category.name %>:</h1>
+
+<p>
+  <strong>Recipes:</strong> 
+  <% if @category.recipes.empty? %>No recipes<% end %>
+  
+  <% @category.recipes.each do |recipe| %> 
+    <p><%= link_to recipe.title, recipe %></p>
+    <p><%= recipe.text[0,500] %>...</p>
+  <% end %>
+
+<p> 

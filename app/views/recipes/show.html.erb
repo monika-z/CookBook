@@ -1,29 +1,41 @@
 <p>
-  <strong>Title:</strong>
-  <%= @recipe.title %>
+  <h2><strong> <%= @recipe.title %> </strong></h2>
 </p>
  
 <p>
-  <strong>Author:</strong>
-  <%= @recipe.user_id %>
+  Author:<strong><%= @recipe.user.username %></strong>
 </p> 
  
 <p>
-  <strong>Text:</strong>
+  <strong>Categories:</strong> 
+  <% if @recipe.categories.empty? %>No categories<% end %>
+  
+        <% @recipe.categories.each do |category| %> 
+        <%= link_to category.name, category %><% end %>
+
+<p>
+ 
+ 
+<p>
   <%= @recipe.text %>
 </p>
 
-<h2>Comments</h2>
+<hr>
+
+<h4>Comments(<%= @recipe.comments.size %>):</h4>
 <%= render @recipe.comments %>
 
 <% if user_signed_in? %>
 
-  <h2>Add a comment:</h2>
+  <h4>Add a comment:</h4>
   <%= render 'comments/form' %>
   
 
     <% if  current_user.id == @recipe.user_id  %>
       <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
+      <%= link_to 'Delete', recipe_path(@recipe),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>   |       
     <% end %>  
 <% end %>
 

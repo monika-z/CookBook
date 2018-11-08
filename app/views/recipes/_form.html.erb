@@ -24,6 +24,14 @@
     <%= f.text_area :text %>
   </p>
  
+
+  <p>
+      <%= f.label :categories %> (Hold Ctrl to select multiple) <br>
+      <%= f.select :category_ids, @categories, {}, :multiple => true %>
+  </p>
+
+
+ 
   <p>
     <%= f.submit %>
   </p>
