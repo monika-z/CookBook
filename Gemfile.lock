@@ -1,3 +1,13 @@
+GIT
+  remote: git://github.com/activerecord-hackery/ransack.git
+  revision: b411fcf699cc13a4e15c91227a51f482c32ee694
+  specs:
+    ransack (2.1.0)
+      actionpack (>= 5.0)
+      activerecord (>= 5.0)
+      activesupport (>= 5.0)
+      i18n
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -180,6 +190,7 @@ DEPENDENCIES
   jquery-rails
   pg
   rails (~> 5.0)
+  ransack!
   sass-rails (~> 5.0.1)
   sdoc (~> 0.4.0)
   spring

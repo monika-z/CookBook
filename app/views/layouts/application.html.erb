@@ -9,6 +9,16 @@
 <body>
   <%= link_to 'All recipes', recipes_path %> | <%= link_to 'All categories', categories_path %>
   
+  <%= search_form_for @q do |f| %>
+
+  <%= f.label 'Search:' %>
+  <%= f.search_field :title_or_text_cont %>
+
+  <%= f.submit %>
+  
+<% end %>
+  
+  
   <% if user_signed_in?%>
   
   Welcome <%= current_user.username %>! |
